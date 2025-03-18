@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+
+    <style>
+        /* estilo para o tipo projeto */
+        .projetos {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .projeto {
+            width: 30%;
+            margin: 10px 0;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .projeto img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!--selecionando a classe projetos para referencia de estilo-->
+    <section id="projetos" class="projetos">
+        <div class="projeto">
+            <img src="" alt="Projeto 1">
+            <h2>Análise de Dados</h2>
+            <p>Esse é um projeto focado em Análise de Dados do Usuário, para fins administrativos.</p>
+            <img src="dados.png" alt="dados" style="width: 78px; height:78px">
+        </div>
+        <!--selecionando a classe projeto para referencia de estilo-->
+        <div class="projeto">
+            <img src="" alt="Projeto 2">
+            <h2>Financeiro</h2>
+            <p>Esse é um projeto focado em demonstrar as condições financeiras da empresa.</p>
+            <img src="finanças-em-ordem.jpg" alt="financeiro" style="width: 78px; height: 78px;">
+        </div>
+        <!--classe projeto para a escolha de estilo-->
+        <div class="projeto">
+            <img src="" alt="Projeto 3">
+            <h2>Desempenho</h2>
+            <p>Esse é um projeto cujo o proposito é ter uma análise sobre o desempenho dos funcionários da empresa.</p>
+            <img src="desempenho.png" alt="desempenho" style="width: 78px; height: 78px">
+        </div>
+    </section>
+</body>
+</html>
