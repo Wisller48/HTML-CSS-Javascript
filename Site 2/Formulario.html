@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <!--estilo em css para cada elemento do formulario e do corpo do site-->
+    <style>
+
+        body{
+            background-color: rgb(40, 40, 40);
+            color: white;
+        }
+        /* estilo para o tipo texto */
+        input[type="text"]{
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        /* estilo para o tipo email */
+        input[type="email"]{
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        /* estilo para o tipo numero */
+        input[type="number"]{
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        /* estilo para o tipo telefone */
+        input[type="tel"]{
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        /* estilo para o tipo botão */
+        input[type="button"]{
+            width: 120px;
+            margin-left: 35px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!--Titulo da Pagina-->
+    <h1>Formulario de Contato</h1>
+    <br>
+    <hr>
+    <br>
+    <!--Formulario para preenchimento, sendo obrigatorio o preenchimento antes do envio-->
+    <form name="input" action="" method="get">
+        <label>Nome: </label>
+        <input type="text" placeholder="Digite seu nome aqui" required>
+        <br><br>
+        <label>Email: </label>
+        <input type="email" placeholder="Digite seu email" required>
+        <br> <br>
+        <label>Endereço: </label>
+        <input type="text" placeholder="Digite seu endereço">
+        <br><br>
+        <label>CEP: </label>
+        <input type="number" placeholder="Digite seu CEP" required>
+        <br><br>
+        <label>Telefone: </label>
+        <input type="tel" placeholder="Digite seu telefone de contato" required>
+        <br><br>
+        <h2>Digite uma mensagem:</h2>
+        <textarea name="mensagem" placeholder="Digite sua mensagem aqui" rows="10" cols="50"></textarea>
+        <br><br>
+        <input type="button" value="Enviar formulário" required>
+    </form>  
+</body>
+</html>
