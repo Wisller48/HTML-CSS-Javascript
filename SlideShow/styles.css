@@ -1,0 +1,69 @@
+/* styles.css */
+
+/* Estilização do corpo */
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+/* Cabeçalho */
+
+header {
+    background-color: white;
+    color: black;
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* Seleção Principal */
+
+main {
+    padding: 2em;
+    text-align: center;
+}
+
+/* Slideshow */
+
+#slideshow{
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.slide {
+    display: none; /* Esconde todos os slides inicialmente */
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Botões de Navegação */
+
+button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1em;
+}
+
+button:hover {
+    background-color: white;
+}
+
+/* Rodapé */
+
+footer {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 1em 0;
+}
