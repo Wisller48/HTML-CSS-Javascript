@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            background-color: rgb(97, 24, 1);
+            color: white;
+            font-style: italic;
+            font-size: medium;
+            text-align: center;
+            padding: 10px;
+        }
+
+        body {
+            background-color: burlywood;
+            height: 100%;
+        }    
+
+        p, li, ol {
+            padding: 25px;
+        }
+
+        /* Estilo para a classe perguntas */
+        .perguntas {
+            background-color: burlywood;
+            color: black;
+            font-style: italic;
+            font-size: large;            
+            padding: 32px;
+        }
+
+        .pergunta-faq:hover{
+            cursor: pointer;
+        }
+
+        /* Estilo para as respostas */
+        .resposta-faq {
+            display: none;
+            margin-top: 10px;
+        }
+
+        /* Estilo quando a pergunta é clicada */
+        .ativa .resposta-faq {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- aplicando o estilo escolhido no cabeçalho -->
+    <header>
+        <br>
+        <h1>Perguntas Frequentes (FAQ)</h1>
+        <br><br>
+    </header>
+
+    <!-- aplicando o estilo selecionado na classe perguntas -->
+    <div class="perguntas">
+        <!-- lista não numérica -->
+        <ul>
+            <br>
+            <li><b>Principais Perguntas</b></li>
+        </ul>
+        <br>
+
+        <ol>
+            <li class="pergunta-faq"><u>Como faço para criar uma conta?</u>
+                <p class="resposta-faq">
+                    <b>Para criar uma conta, clique no botão "Cadastrar" no canto superior direito da página inicial. Preencha o formulário com seu nome, e-mail e senha. Após preencher todos os campos obrigatórios, clique em "Criar conta". Você receberá um e-mail de confirmação para ativar sua conta.</b>
+                </p>
+            </li>
+
+            <li class="pergunta-faq"><u>Esqueci minha senha, como posso recuperar?</u>
+                <p class="resposta-faq">
+                    <b>Clique em "Esqueci minha senha" na tela de login. Insira seu e-mail cadastrado e você receberá um link para redefinir sua senha. Caso não receba o e-mail, verifique a pasta de spam ou tente novamente.</b>
+                </p>
+            </li>
+
+            <li class="pergunta-faq"><u>Como posso alterar meus dados de pagamento?</u>
+                <p class="resposta-faq">
+                    <b>Para atualizar suas informações de pagamento, acesse a seção "Minha Conta" e clique em "Métodos de Pagamento". A partir daí, você pode adicionar ou editar seus dados de cartão de crédito, débito ou outras formas de pagamento disponíveis.</b>
+                </p>
+            </li>
+
+            <li class="pergunta-faq"><u>Posso cancelar meu pedido após a compra?</u>
+                <p class="resposta-faq">
+                    <b>O cancelamento de pedidos depende do status da sua compra. Se o pedido ainda não foi processado, você pode cancelar diretamente pelo seu perfil na área de "Pedidos". Se o pedido já foi enviado, entre em contato com o suporte para mais informações sobre o processo de devolução.</b>
+                </p>
+            </li>
+
+            <li class="pergunta-faq"><u>Como faço para entrar em contato com o suporte?</u>
+                <p class="resposta-faq">
+                    <b>Você pode entrar em contato com o suporte através do nosso chat online, disponível 24/7, ou enviando um e-mail para suporte@exemplo.com. Nossa equipe está pronta para ajudar com qualquer dúvida ou problema que você possa ter.</b>
+                </p>
+            </li>
+        </ol>
+    </div>
+
+    <script>
+        // Função para alternar entre mostrar/ocultar respostas
+        function alternarResposta(pergunta){
+            pergunta.classList.toggle('ativa');
+        }
+
+        // Adiciona o clique em cada pergunta
+        document.querySelectorAll('.pergunta-faq').forEach(pergunta => {
+            pergunta.addEventListener('click', function(){
+                alternarResposta(this);
+            });
+        });
+    </script>
+
+</body>
+</html>
