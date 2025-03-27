@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast</title>
+
+    <style>
+
+        /* estilo para o corpo do site */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: yellow;
+        }
+
+        /* estilo para o cabeçalho */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* estilo para o cabeçalho com o tamanho h1 */
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        /* estilo para a classe player onde ficará o audio do podcast */
+        .player {
+            text-align: center;
+            margin-top: 45px;
+            margin-inline-end: 12px;
+        }
+
+        /* estilo para a tabela que ficará os episódios anteriores */
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #333;
+            color: white;
+        }
+
+        /* classe com o estilo da letra utilizada no titulo do episodio */
+        .titulo-episodio {
+            font-weight: bold;
+            cursor: grab;
+        }
+
+        /* escolhendo o estilo para a classe episodio */
+        .episodio {
+            color:black;
+            padding: 32px;
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--apicando o estilo do header-->
+    <header>
+        <h1>Podcast Boleiros</h1>
+    </header>
+
+    <!--aplicando a classe player para o episódio mais recente-->
+    <div class="player">
+        <h2>Episódio 4: Qual o melhor time brasileiro na temporada?</h2>
+        <!--utilizando um menu de audio para suportar o tipo-->
+        <audio id="audio_player" controls autoplay>
+            <!--utilizei um podcast já existente-->
+            <source src="https://dcs-spotify.megaphone.fm/APO2770802376.mp3?key=deb6f83d194d144966e78dc81d33b077&request_event_id=49284d75-5bf2-4235-b6b7-1288553d1cca&timetoken=1743097726_216CCBEC7B5F7AE8BCDEAB389DE3F5CB" type="audio/mp3">
+        </audio>
+    </div>
+
+    <!--aplicando a classe episódio para utilizar o estilo escolhido anteriormente-->
+    <div class="episodio">
+        <h2>Lista de Episódios</h2>
+
+        <!--tabela para a lista de episódios anteriores-->
+        <table>
+
+            <!--cabeçalho da tabela-->
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Data</th>
+                    <th>Duração</th>
+                </tr>
+            </thead>
+
+            <!--corpo da tabela-->
+            <tbody>
+                <tr onclick="alert('Você está prestes a entrar no episodio 3!')">
+                    <td class="titulo-episodio">Episódio 3: Quem é o melhor do mundo</td>
+                    <td>12 de março de 2025</td>
+                    <td>30:23</td>
+                </tr>
+                <tr onclick="alert('Você está prestes a entrar no episodio 2!')">
+                    <td class="titulo-episodio">Episódio 2: Finais dos Campeonatos Regionais</td>
+                    <td>5 de março de 2025</td>
+                    <td>54:45</td>
+                </tr>
+                <tr onclick="alert('Você está prestes a entrar no episodio 1!')">
+                    <td class="titulo-episodio">Episodio 1: Champions League</td>
+                    <td>15 de fevereiro de 2025</td>
+                    <td>44:19</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const audioPlayer = document.getElementById('audio_player');
+            audioPlayer.play(); // Toca o áudio automaticamente ao carregar a página
+
+            // Muda a cor do título do episódio quando o mouse passar sobre ele
+            const episodioTitles = document.querySelectorAll('.titulo-episodio');
+            episodioTitles.forEach(title => {
+                title.addEventListener('mouseover', function(){
+                    this.style.color = '#f00';
+                });
+
+                title.addEventListener('mouseout', function(){
+                    this.style.color = '';
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
