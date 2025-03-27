@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora de Filmes</title>
+    <style>
+
+        /* estilo para o cabeçalho */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* estilo para a classe filme */
+        .filme {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        /* estilo para a classe filme com o tamanho de titulo h2 */
+        .filme h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        /* estilo para a classe filme utilizando paragrafos */
+        .filme p {
+            font-size: 1em;
+            color: #555;
+        }
+
+        /* estilo da classe video 8 */
+        .video-container {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        /* estilo para a classe estrelas */
+        .estrelas {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            direction: rtl;
+        }
+
+        .estrelas input {
+            display: none;
+        }
+
+        .estrelas label {
+            font-size: 2em;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        /* listar se a estrela foi preenchida ou não (com a cor "gold") */
+        .estrelas input:checked ~ label,
+        .estrelas input:hover ~ label,
+        .estrelas input:checked ~ label:hover,
+        .estrelas input:hover ~ label:hover {
+            color: gold;
+        }
+
+        .estrelas label:hover,
+        .estrelas input:checked + label:hover,
+        .estrelas input:checked + label {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+
+    <!--aplicando o estilo da header-->
+    <header>
+        <h1>Locadora de Filmes</h1>
+    </header>
+
+    <!--selecionando o estilo da classe filme-->
+    <section class="filme">
+        <h2>Vingadores: Ultimato</h2>
+        <p>Após Thanos eliminar metade das criaturas vivas, os Vingadores têm de lidar com a perda de amigos e entes queridos. Com Tony Stark vagando perdido no espaço sem água e comida, Steve Rogers e Natasha Romanov lideram a resistência contra o titã louco.</p>
+        
+        <!-- Video -->
+        <div class="video-container">
+            <iframe width="750" height="360" src="https://www.youtube.com/embed/g6ng8iy-l0U" title="Vingadores: Ultimato | Trailer Legendado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    
+        <!-- Estrelas para avaliação -->
+        <div class="estrelas">
+            <input type="radio" id="estrela5" name="classificacao" value="5"><label for="estrela5">&#9733;</label>
+            <input type="radio" id="estrela4" name="classificacao" value="4"><label for="estrela4">&#9733;</label>
+            <input type="radio" id="estrela3" name="classificacao" value="3"><label for="estrela3">&#9733;</label>
+            <input type="radio" id="estrela2" name="classificacao" value="2"><label for="estrela2">&#9733;</label>
+            <input type="radio" id="estrela1" name="classificacao" value="1"><label for="estrela1">&#9733;</label>
+        </div>
+    </section>
+    
+    <section class="filme">
+        <h2>Velozes e Furiosos 4</h2>
+        <p>Dominic Toretto descobre que sua amada Letty foi assassinada e resolve procurar pelo autor do crime. Enquanto isso, o agente Brian O'Conner está em busca de um traficante de drogas. Eles percebem que talvez estejam atrás da mesma pessoa.</p>
+    
+        <!-- Video -->
+        <div class="video-container">
+            <iframe width="750" height="360" src="https://www.youtube.com/embed/a9--AI3ZGaw" title="Velozes e Furiosos 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    
+        <!-- Estrelas para avaliação -->
+        <div class="estrelas">
+            <input type="radio" id="estrela5_hp" name="classificacao_hp" value="5"><label for="estrela5_hp">&#9733;</label>
+            <input type="radio" id="estrela4_hp" name="classificacao_hp" value="4"><label for="estrela4_hp">&#9733;</label>
+            <input type="radio" id="estrela3_hp" name="classificacao_hp" value="3"><label for="estrela3_hp">&#9733;</label>
+            <input type="radio" id="estrela2_hp" name="classificacao_hp" value="2"><label for="estrela2_hp">&#9733;</label>
+            <input type="radio" id="estrela1_hp" name="classificacao_hp" value="1"><label for="estrela1_hp">&#9733;</label>
+        </div>
+    </section>
+    
+    <!--Comentario da quantidade de estrelas que foi atribuida ao filme-->
+    <script>
+        const todosOsFilmes = document.querySelectorAll('.filme');
+
+        todosOsFilmes.forEach(filme => {
+            const estrelas = filme.querySelectorAll('.estrelas input');
+            const resultado = filme.querySelector('.estrelas p') || document.createElement('p');
+
+
+            if (!filme.querySelector('.estrelas p')) {
+                filme.querySelector('.estrelas').appendChild(resultado);
+            }
+
+
+            estrelas.forEach(estrela => {
+                estrela.addEventListener('change', function() {
+                    resultado.textContent = `Você avaliou com ${this.value} estrela(s) para o filme.`;
+                });
+            });
+        });
+
+    </script>
+
+</body>
+</html>
