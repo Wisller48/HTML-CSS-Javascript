@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /* Estilo do cabeçalho do site */
+        header {
+            background-color: black;
+            color: steelblue;
+            padding: 20px;
+            text-align: left;
+        }
+
+        h1, h2, h3, label, form, p{
+            padding: 7px;
+            margin: 5px;
+        }
+
+        .postagem {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .comentarios {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .comentario-item {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .comentario-item h4 {
+            margin: 0;
+            color: steelblue;
+        }
+
+        .comentario-item p {
+            margin: 5px 0 0;
+        }
+
+        /* Estilo para o tipo de texto inserido */
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Estilo para o botão */
+        input[type="submit"] {
+            background-color: steelblue;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: darkblue;
+        }
+
+        .btn-link {
+            background-color: steelblue;
+            color: white;
+            padding: 10px 20px;
+            margin: 12px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-link:hover {
+            background-color: darkblue;
+        }
+
+        /* Suavização */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i>Tudo sobre games</i></h1>
+    </header>
+
+    <br>
+    <br>
+
+    <div class="postagem">
+        <h2>Sobre o site</h2>
+        <p>Esse é um site focado na comunidade gamer e tem como principal função conversar sobre jogos.</p>
+    </div>
+
+    <br>
+    <h3>Divirta-se conversando com a comunidade!</h3>
+    <br>
+
+    <a href="#formulario" class="btn-link">Enviar mensagem</a>
+    <a href="#comentarios" class="btn-link">Ler mensagens</a>
+    <br><br>
+
+    <!--Criando o formulario com as perguntas-->
+    <div id="formulario">
+        <form id="comentarioForm">
+            <label>Nome: </label>
+            <input type="text" id="nome" placeholder="Digite seu nome ou usuário" required>
+            <br><br>
+            <label>Email: </label>
+            <input type="email" id="email" placeholder="Digite seu email" required>
+            <br><br>
+            <h3>Escreva seu comentário</h3>
+            <textarea id="comentario" name="comentario" placeholder="Digite seu comentário" rows="5" cols="50" required></textarea>
+            <br><br>
+            <input type="submit" value="Enviar comentário">
+        </form>
+    </div>
+
+    <br><br>
+    
+    <div class="comentarios" id="comentarios">
+        <h3>Comentários</h3>
+        <!-- Os comentários serão exibidos aqui -->
+    </div>
+
+    <script>
+        // Array para armazenar os comentários
+        let comentarios = [];
+
+        // Função para carregar os comentários
+        function carregarComentarios(){
+            const comentariosContainer = document.getElementById('comentarios');
+            comentariosContainer.innerHTML = '<h3>Comentários</h3>';
+            comentarios.forEach(comentario => {
+                const comentarioDiv = document.createElement('div');
+                comentarioDiv.classList.add('comentario-item');
+                comentarioDiv.innerHTML = `
+                    <h4>${comentario.nome} <small>(${comentario.email})</small></h4>
+                    <p>${comentario.texto}</p> `;
+                comentariosContainer.appendChild(comentarioDiv);
+            });
+        }
+
+        // Função para salvar um novo comentário
+        function salvarComentario(event){
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const comentarioTexto = document.getElementById('comentario').value;
+
+            const novoComentario = {
+                nome: nome,
+                email: email,
+                texto: comentarioTexto
+            };
+
+            // Adiciona o novo comentário ao array
+            comentarios.push(novoComentario);
+
+            // Limpa o formulário
+            document.getElementById('comentarioForm').reset();
+
+            // Recarrega os comentários
+            carregarComentarios();
+        }
+
+        document.getElementById('comentarioForm').addEventListener('submit', salvarComentario);
+
+        // Carrega os comentários ao carregar a página
+        window.onload = carregarComentarios;
+    </script>
+
+</body>
+</html>
