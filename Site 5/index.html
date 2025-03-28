@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* estilo utilizado no cabeçalho */
+        header {
+            background-color: black;
+            color: white;
+            font-style: italic;
+            text-align: center;
+            padding: 12px;
+        }
+
+        h3, p, li, ul {
+            padding: 10px;
+            margin: 7px;
+        }
+
+        /* Estilo para o rodapé */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            margin-top: 132px;
+        }
+    
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        main {
+            flex: 1;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /* Estilo para as seções escondidas */
+        .ocultar {
+            display: none;
+        }
+
+        .click {
+            cursor: pointer;
+            text-align: center;
+            background-color: midnightblue;
+            color: white;
+            padding: 10px 20px;
+            margin: 12px;
+            margin-top: 90px;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mark Zuckerberg - Eng. da Computação/Cientista de Dados</h1>
+        <br>
+    </header>
+    <br>
+    
+    <div class="center">
+    <h3 class="click" onclick="toggleSection('experiencia')"><i>Experiência Profissional</i></h3>
+    <div id="experiencia" class="ocultar">
+        <!-- Lista não numérica com informações sobre as experiências profissionais -->
+        <ul>
+            <li>Desenvolvedor de Software | Tech Innovations Ltda.</li>
+            <p>
+                Janeiro de 2022 - Dezembro de 2024 <br>
+                Responsável pelo desenvolvimento de aplicativos web e mobile, utilizando tecnologias como JavaScript, React, Node.js e MongoDB. <br>
+                Implementação de funcionalidades baseadas nos requisitos fornecidos pelos clientes, com foco na escalabilidade e desempenho dos sistemas. <br>
+                Acompanhamento do ciclo de vida do software, desde a análise de requisitos até a implementação de soluções. <br>
+            </p>
+            <li>Analista de Sistemas e Arquitetura de Redes | CyberTech Solutions</li>
+            <p>
+                Agosto de 2019 - Fevereiro de 2021 <br>
+                Planejou e implementou redes locais (LANs) e redes de longa distância (WANs), garantindo a alta disponibilidade e segurança dos sistemas. <br>
+                Gerenciou servidores e dispositivos de rede utilizando ferramentas como Cisco, Linux e VMware. <br>
+                Trabalhou na implementação de soluções de segurança, como firewalls, VPNs e monitoramento de tráfego. <br>
+            </p>
+            <li>Engenheiro de Hardware | NextGen Technologies</li>
+            <p>
+                Março de 2021 - Dezembro de 2021 <br>
+                Projetou circuitos eletrônicos para novos dispositivos embarcados, utilizando plataformas como Arduino e Raspberry Pi. <br>
+                Desenvolvimento de firmware em C/C++ para controle e monitoramento de dispositivos, incluindo sensores e atuadores. <br>
+            </p>
+        </ul>
+    </div>
+
+    <br><br>
+
+    <h3 class="click" onclick="toggleSection('formacao')"><i>Formações Acadêmicas</i></h3>
+    <div id="formacao" class="ocultar">
+        <!-- Lista não numérica para informações de formações academicas -->
+        <ul>
+            <li>Ensino Médio Completo | Ardsley High School</li>
+            <p>
+                Agosto de 1998 - Junho de 2000
+            </p>
+            <li>Ciências de dados | Harvard</li>
+            <p>
+                Setembro de 2002 - Janeiro de 2006
+            </p>
+            <li>Engenharia da Computação | Harvard</li>
+            <p>
+                Julho de 2007 - Março de 2012
+            </p>
+        </ul>
+    </div>
+    </div>
+
+    <br><br>
+
+    <footer>
+        <h3><i>Contatos</i></h3>
+        <P>
+            Email: markzuzu@hotmail.com  ||  Telefone: (+1) 990783445 <br>
+        </P>
+    </footer>
+
+    <script>
+        // Função para alternar a visibilidade das seções
+        function toggleSection(id) {
+            const section = document.getElementById(id);
+            if (section.classList.contains('ocultar')) {
+                section.classList.remove('ocultar');  // Torna a seção visível
+            } else {
+                section.classList.add('ocultar');  // Torna a seção oculta
+            }
+        }
+    </script>
+</body>
+</html>
