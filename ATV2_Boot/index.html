@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="bg-dark">
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-3 col-md-4 p-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/960px-Flag_of_Brazil.svg.png" alt="foto1" class="img-fluid img-thumbnail" style="width: 150px;">
+            </div>
+
+            <div class="col-3 col-md-4 p-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/255px-Flag_of_Spain.svg.png" alt="foto2" class="img-fluid img-thumbnail" style="width: 150px;">
+            </div>
+
+            <div class="col-3 col-md-4 p-3">
+                <img src="https://static.mundoeducacao.uol.com.br/mundoeducacao/2021/10/1-bandeira-da-inglaterra.jpg" alt="foto3" class="img-fluid img-thumbnail" style="width: 160px;">
+            </div>
+        </div>
+    </div>
+    </div>
+    <br><br>
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/960px-Flag_of_Brazil.svg.png" class="mx-auto d-block" alt="foto1" style="width: 50%;">
+        </div>
+        <div class="carousel-item">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/255px-Flag_of_Spain.svg.png" class="mx-auto d-block" alt="foto2" style="width: 50%;">
+        </div>
+        <div class="carousel-item">
+        <img src="https://static.mundoeducacao.uol.com.br/mundoeducacao/2021/10/1-bandeira-da-inglaterra.jpg" class="mx-auto d-block" alt="foto3" style="width: 50%;">
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+        </button>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
