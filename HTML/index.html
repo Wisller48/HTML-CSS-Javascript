@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoon Discovery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="navbar-container">
+            <img src="CartoonDiscovery.png" alt="Logo do Cinema" class="logo">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#" class="tab-link" data-tab="home">Início</a></li>
+                    <li><a href="#" class="tab-link" data-tab="search">Busca</a></li>
+                    <li><a href="#" class="tab-link" data-tab="login">Login</a></li>
+                    <li><a href="#" class="tab-link" data-tab="about">Quem Somos?</a></li>
+                    <li><a href="#" class="tab-link" data-tab="catalog">Catálogo</a></li>
+                    <li><a href="#" class="tab-link" data-tab="location">Localização</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- Banner de Filme -->
+    <div class="banner">
+        <div class="banner-conteudo">
+            <h1 class="titulo-filme">THUNDERBOLTS*</h1>
+            <a href="#" class="assista-agora">Comprar Ingresso</a>
+        </div>
+    </div>
+
+    <main id="content">
+        <!-- Aba Inicio -->
+        <section id="home" class="tab-content active">
+            <h1>Filmes em Cartaz</h1>
+            <div class="filme-list">
+                <!-- Exibir filmes em cartaz aqui -->
+                <div class="filme-item">
+                    <img src="imagem1.jpg" alt="Filme 1">
+                    <p>Filme 1 - Em Cartaz</p>
+                </div>
+                <div class="filme-item">
+                    <img src="imagem2.jpg" alt="Filme 2">
+                    <p>Filme 2 - Em Cartaz</p>
+                </div>
+                <div class="filme-item">
+                    <img src="imagem3.jpg" alt="Filme 3">
+                    <p>Filme 3 - Em Cartaz</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aba Busca -->
+        <section id="search" class="tab-content">
+            <h2>Busca de Filmes</h2>
+            <input type="text" placeholder="Digite o nome do filme">
+            <button>Buscar</button>
+        </section>
+
+        <!-- Aba Login -->
+        <section id="login" class="tab-content">
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="E-mail">
+                <input type="password" placeholder="Senha">
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+
+        <!-- Aba Quem Somos? -->
+        <section id="about" class="tab-content">
+            <h2>Quem Somos</h2>
+            <p>Informações sobre a nossa empresa...</p>
+        </section>
+
+        <!-- Aba Catálogo -->
+        <section id="catalog" class="tab-content">
+            <h2>Catálogo de Filmes</h2>
+            <div class="filme-list">
+                <div class="filme-item">Filme A</div>
+                <div class="filme-item">Filme B</div>
+                <div class="filme-item">Filme C</div>
+            </div>
+        </section>
+
+        <!-- Aba Localização -->
+        <section id="location" class="tab-content">
+            <h2>Encontre Cinemas Próximos</h2>
+            <div id="map">[Mapa Interativo]</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Cartoon Discovery</p>
+    </footer>
+</body>
+</html>
