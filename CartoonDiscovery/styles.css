@@ -303,3 +303,55 @@ html, body {
 .fechar-login:hover {
     background-color: #aaa;
 }
+
+.catalogo-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.catalogo-filmes {
+    display: flex;
+    overflow-x: auto;
+    padding: 0 40px; 
+    scroll-behavior: smooth;
+    gap: 30px;
+}
+
+.filme-item {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+.filme-item img {
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.catalogo-filmes::-webkit-scrollbar {
+    display: none;
+}
+
+.seta {
+    font-size: 40px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.seta-esquerda {
+    position: absolute;
+    left: 10px;
+}
+
+.seta-direita {
+    position: absolute;
+    right: 10px;
+}
