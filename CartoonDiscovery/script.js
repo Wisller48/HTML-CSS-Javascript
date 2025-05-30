@@ -147,4 +147,33 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "none";
         showTab('inicio');
     });
+
+    const setaDireita = document.getElementById('catalogo-direita');
+    const setaEsquerda = document.getElementById('catalogo-esquerda');
+    const catalogoContainer = document.getElementById('catalogoContainer');
+
+    function verificarSetas() {
+        const scrollLeft = catalogoContainer.scrollLeft;
+        const scrollWidth = catalogoContainer.scrollWidth;
+        const clientWidth = catalogoContainer.clientWidth;
+
+        // Verrifica se chegou ao inicio ou final da rolagem na aba de catalogos e esconde as setas
+        setaEsquerda.style.display = scrollLeft <= 5 ? 'none' : 'block';
+        setaDireita.style.display = scrollLeft + clientWidth >= scrollWidth - 5 ? 'none' : 'block';
+    }
+    
+    // Verifica no carregamento da página
+    verificarSetas();
+
+    // Verifica a cada rolagem do container
+    catalogoContainer.addEventListener('scroll', verificarSetas);
+
+    setaDireita.addEventListener('click', () => {
+        catalogoContainer.scrollBy({ left: 400, behavior: 'smooth' });
+    });
+
+    setaEsquerda.addEventListener('click', () => {
+        catalogoContainer.scrollBy({ left: -400, behavior: 'smooth' });
+    });
+
 });
