@@ -1,0 +1,35 @@
+/* Coolors Exported Palette - 04080f-938ba1-f7f7f2-613dc1-8f2d56 */
+
+- Tailwind
+
+{ 'rich_black': { DEFAULT: '#04080f', 100: '#010203', 200: '#020306', 300: '#03050a', 400: '#03070d', 500: '#04080f', 600: '#19325d', 700: '#2d5bab', 800: '#648ed6', 900: '#b2c6ea' }, 'cool_gray': { DEFAULT: '#938ba1', 100: '#1d1b21', 200: '#3b3642', 300: '#585163', 400: '#756c84', 500: '#938ba1', 600: '#a9a3b4', 700: '#bfbac7', 800: '#d4d1d9', 900: '#eae8ec' }, 'baby_powder': { DEFAULT: '#f7f7f2', 100: '#3d3d25', 200: '#79794a', 300: '#adad79', 400: '#d2d2b6', 500: '#f7f7f2', 600: '#f9f9f5', 700: '#fafaf7', 800: '#fcfcfa', 900: '#fdfdfc' }, 'iris': { DEFAULT: '#613dc1', 100: '#130c27', 200: '#27184e', 300: '#3a2574', 400: '#4d319b', 500: '#613dc1', 600: '#8064ce', 700: '#a08bda', 800: '#c0b1e7', 900: '#dfd8f3' }, 'quinacridone_magenta': { DEFAULT: '#8f2d56', 100: '#1d0911', 200: '#391222', 300: '#561b34', 400: '#732445', 500: '#8f2d56', 600: '#c03d74', 700: '#d16c96', 800: '#e09db9', 900: '#f0cedc' } }
+
+- CSV
+
+04080f,938ba1,f7f7f2,613dc1,8f2d56
+
+- With #
+
+#04080f, #938ba1, #f7f7f2, #613dc1, #8f2d56
+
+- Array
+
+["04080f","938ba1","f7f7f2","613dc1","8f2d56"]
+
+- Object
+
+{"Rich black":"04080f","Cool gray":"938ba1","Baby powder":"f7f7f2","Iris":"613dc1","Quinacridone magenta":"8f2d56"}
+
+- Extended Array
+
+[{"name":"Rich black","hex":"04080f","rgb":[4,8,15],"cmyk":[73,47,0,94],"hsb":[218,73,6],"hsl":[218,58,4],"lab":[2,0,-3]},{"name":"Cool gray","hex":"938ba1","rgb":[147,139,161],"cmyk":[9,14,0,37],"hsb":[262,14,63],"hsl":[262,10,59],"lab":[59,7,-11]},{"name":"Baby powder","hex":"f7f7f2","rgb":[247,247,242],"cmyk":[0,0,2,3],"hsb":[60,2,97],"hsl":[60,24,96],"lab":[97,-1,2]},{"name":"Iris","hex":"613dc1","rgb":[97,61,193],"cmyk":[50,68,0,24],"hsb":[256,68,76],"hsl":[256,52,50],"lab":[37,47,-64]},{"name":"Quinacridone magenta","hex":"8f2d56","rgb":[143,45,86],"cmyk":[0,69,40,44],"hsb":[335,69,56],"hsl":[335,52,37],"lab":[35,45,-2]}]
+
+- XML
+
+<palette>
+  <color name="Rich black" hex="04080f" r="4" g="8" b="15" />
+  <color name="Cool gray" hex="938ba1" r="147" g="139" b="161" />
+  <color name="Baby powder" hex="f7f7f2" r="247" g="247" b="242" />
+  <color name="Iris" hex="613dc1" r="97" g="61" b="193" />
+  <color name="Quinacridone magenta" hex="8f2d56" r="143" g="45" b="86" />
+</palette>
