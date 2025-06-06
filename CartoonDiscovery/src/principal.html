@@ -1,0 +1,179 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Be+Vietnam+Pro%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-[#181111] dark group/design-root overflow-x-hidden"
+      style='font-family: "Be Vietnam Pro", "Noto Sans", sans-serif;'
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#382929] px-10 py-3">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-white">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+              <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Cineplex</h2>
+            </div>
+            <div class="flex items-center gap-9">
+              <a class="text-white text-sm font-medium leading-normal" href="#">Now Playing</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Coming Soon</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Locations</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Gift Cards</a>
+              <a class="text-white text-sm font-medium leading-normal" href="#">Rewards</a>
+            </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-[#b89d9f] flex border-none bg-[#382929] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#382929] focus:border-none h-full placeholder:text-[#b89d9f] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  value=""
+                />
+              </div>
+            </label>
+            <button
+              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#382929] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+            >
+              <span class="truncate">Sign In</span>
+            </button>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="px-4 py-3">
+              <label class="flex flex-col min-w-40 h-12 w-full">
+                <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                  <div
+                    class="text-[#b89d9f] flex border-none bg-[#382929] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                    data-icon="MagnifyingGlass"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    placeholder="Search movies, showtimes, actors, etc."
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#382929] focus:border-none h-full placeholder:text-[#b89d9f] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                    value=""
+                  />
+                </div>
+              </label>
+            </div>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+              <div class="flex items-stretch p-4 gap-3">
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB3Kti4JcZTV2_1jqDlMU4ECL_uwlju-zYkkfIK7Ccu1qJjpi8WosyMQCT26OVgljbQtoLi4YDd-VmjOuE3Wo-MmIQI8tRBImgG_ERGhdYeyuhfe6veo7VzEbfDjzX0mTUfROQXQEhu9hJTB2sMRhK_lX6KwdnS9RkmqShknrAGq0S7nC-xsVHGVX4RurzUR17695FgAgMQXJpd5lwg-zYuC2AcIrKjKPF7NrAXtFEpO-_-qPVrsE1UtQsZevyVH7vwQOCGkpPv7FbS");'
+                  ></div>
+                  <p class="text-white text-base font-medium leading-normal">Action Packed</p>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABIaYom0ln0wwYNqIkmTygSgJfNa22kLNohoKemLUYmWCKLxATD1OUG-qqN5oiceeZ8xlbbXxsVeKP3SMiTPex8m3fAwdXVmyXe6UrYpSF0K2ijFFpSEZlr2i294COWy6EenrnmqxmkSPHJsrwyZgx4d7mqLvLTxfG7L0taWBGwMv88R_bdQ9c8ytPFGXx2PO211djJZ5i2N80Ph4A841Sk-Kzq5XNpzMwDDi8fQM6N6Bl1Ethf7x4bvXUAeoFlNaXTyoNoBYNta74");'
+                  ></div>
+                  <p class="text-white text-base font-medium leading-normal">Laugh Out Loud</p>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCekfX0Zbv592MpTBb9CzopIdXl4yYfKkUIjJhxF9pZW1iH-OQMspsIKpcY5g2IfH_YKjgSKYwzPWByjD5qvH6wNsvicXE6cnTXC_faWR40RW7rs2uoOfF_TWxEEjPQpUAHKxuUUqIEQfX5_Bw7jZQxi0ZSLwdf3c-jYtUHUaor_Quae3n9OrXKCP6gYgkVtCB-xcfaBTmBgxmR3a1gvYqOecCLh58BUKdtQ2gr7QMRlHzzgkh-7xaQf0YQDHtierR6P8vKlSPBIHey");'
+                  ></div>
+                  <p class="text-white text-base font-medium leading-normal">Drama Unfolds</p>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMQ9OC_3L7GDQiHhuWSsDN48_yyl--PCfXiyF19vaZuNmbTwRi26ILd2ztOPHYC0JKwcyivrILCojnPp3i-d4FFqfgy7d-Ir7iuoSVEJfY3bffL7Rmv9hzPIOsKw0SBF0jmuIkXJW1UGfRWKRBUznKz4G-wDlFFKGRVr4xPWmWmCjxFO5O9q9uJhT6fiKXAn8d3_ZcnBXAARRZ7wEV-bz3yKdM7yFEsMh_llpPg8drCXQdyhTNF-nrNqOykSJzxNuk8BIXzgYl2sC7");'
+                  ></div>
+                  <p class="text-white text-base font-medium leading-normal">Animation Adventure</p>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Now Playing</h2>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCplmrIbR3-rLsGeChHWKE7McqaLwimX-0W_kImNyQzxmVb71k61qT-ijRsETY1um4AU9oPziZM8aNB6uK5mkhTgwjJkbfQxXtwzl41pZKuISA-YNaTgbhvRFvuWHLByoIClA_IC_l3NFG9FxQA2gw2HobZLTuzeduZVL_7sVjGIj9sFM93bKhVWcsfgrZKaUCVaCDqFZ1H1ThwIIV0-pvxU3GZf2pHK7vQ1BaNIOaZAZ80mEnbJk_0lLsSbiVkkCEPV43xrCC_4hPq");'
+                ></div>
+                <p class="text-white text-base font-medium leading-normal">The Last Stand</p>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC0pOOLZDRmkxFcHbBXkzGB8Ak8EFRCLheX8ApiZXiE8FrqdmTJHo3g8-d6yogZvWHcZw39n2i7kGRkvodn9ZXs00ngJCg9P8vpF6O0b1M2nrmwE4R6uYUd-TgM4D3Umb2Dr_ZdWoT4QtrangzB-K62WZvMLWdAf1OLZLl_gpvzIX59gtNwQvNT0G4oKIb18_CmKe3yWoiYjbDJrkzknrmxXT-v4DfNV4I8E9sYxi-v0gPa7Fhu8iVDmmcsBh83pQ20NdofWkGqflLg");'
+                ></div>
+                <p class="text-white text-base font-medium leading-normal">Cosmic Echoes</p>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCaUMadRwOxEX4SrLKVxv6GjtpLhx9_ijvjxk1LBbPHl_aAXxHhZvgZwe_AAXnLoJhbS1n7ObPreziHEHRK7GXBpcXTGSSR5l-9jjVEXJLkJQ5xtiUGV8j7R9g20U_rLi09VDA5BLEXzdVdL4M5qhmimnPIdS2wDA00LlLbdozWsprZOLUAzKBgjXxIRnlNIqjp8EUw_F71wZyv3I5GTQc5UiLHeL42M5yfTE_wKVRa5-S5J8_kb__E7zq9njfXEq1AVvGx3lXmARgS");'
+                ></div>
+                <p class="text-white text-base font-medium leading-normal">City of Dreams</p>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGCpwZq5AD3UYMDDNbKEr1iJbFGaR1t0O6RONzx3thBzmElEZ2qdzV01nJRPNrbVLGiGAdn8kGTfBuC-9CuW0NYDQ-KbPdW4Jhy9OUeWDTd15FyGkW4gLhBz_n-8q7_fBWYBe173CBoE8kUw78HWWPpEEWndDqZEydP05mFhcyEZi76_P5Q9uNR2TTcguxGt98hzq-2s-VA9LA2WF5X0mkJ7n-OUtrMVowqGsLeq14PuwCQ1q3uojHtfCw4u65IGSiLT0EoTnrXoAO");'
+                ></div>
+                <p class="text-white text-base font-medium leading-normal">Whispers of the Past</p>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuByDLJc9YxWplZnuNIqzyrxwZufrj1Kt-03xt_2jm0rSODNWefs3fAj4mSJ83O1J8yyOQaaTrcZy6QNIJgQBBQJ8tA1CwNNry4s_jmzTejXssTRTXFmRLqzIsD5chCrN7p8A1rAfmx2E77Op6DOS6pJiy6mNTsWKUdPKEVFg_0RqBUXEJnFKYsW9p1KV-2jGEFDUobndANybaivWceTFadqOowe5WQTUYh01zf9axx84UbKHJ7kEYjuEYMcijY2sEdlz11w3ZO-3kpt");'
+                ></div>
+                <p class="text-white text-base font-medium leading-normal">Neon Nights</p>
+              </div>
+              <div class="flex flex-col gap-3 pb-3">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCIqbv2XUxcc6oIdzVqBRJMN4crcGWopM_OLkhb4R_SWnFap6Y-kEkYPNZewtah0elK43j0Ny2083IcPcuH63AqwQp7auyb0KdHbA6gMJ7zUcBBx9Q7eB2ge_ie_RWJRiDJdlFyupFIdnTEfdQBUvmBZADoar9zL7OAKbUQHYzTGN_6HMJ2KYIy3lPREjanYWh-y_svCYNXSJMN29-ip_SJiVA8e_-xyx0jJq7Xa6Elmj-yyM-_fkWClHoqOPLGrE4-n3tkp9km7hRH");'
+                ></div>
+                <p class="text-white text-base font-medium leading-normal">Silent Symphony</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
