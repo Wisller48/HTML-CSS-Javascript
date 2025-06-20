@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoon Discovery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!--Função de barra de navegação-->
+    <header>
+        <div class="navbar-container">
+            <img src="images/CartoonDiscovery.png" alt="Logo do Cinema" class="logo" id="logoSite">
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#" class="tab-link" data-tab="inicio">Início</a></li>
+                    <li><a href="#" class="tab-link" data-tab="login">Login</a></li>
+                    <li><a href="#" class="tab-link" data-tab="sobre">Quem Somos?</a></li>
+                    <li><a href="#" class="tab-link" data-tab="catalogo">Catálogo</a></li>
+                    <li><a href="#" class="tab-link" data-tab="local">Localização</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar filmes...">
+                <button id="searchButton">🔍</button>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- Banner de Filme -->
+    <div class="banner-carrossel">
+        <div class="banner-slide active" style="background-image: url('images/Thunderbolts - banner.jpg');" alt="Thunderbolts Banner">
+            <div class="banner-conteudo">
+                <h1 class="titulo-filme">THUNDERBOLTS*</h1>
+                <a href="#filme-detalhes"
+                class="comprar-ingresso"
+                data-titulo="THUNDERBOLTS*"
+                data-img="images/thunderbolts - capa.jpg"
+                data-descricao="Um grupo de anti-heróis é recrutado para uma missão impossível."
+                data-duracao="2h 10min"
+                data-classificacao="14 anos"
+                data-horarios="14h, 17h, 20h"
+                data-elenco="Sebastian Stan, Florence Pugh, Wyatt Russell"
+                data-sala="Sala 1">Ver detalhes</a>
+            </div>
+        </div>
+        <div class="banner-slide" style="background-image: url('images/Superman - banner.jpg');" alt="Superman Banner">
+            <div class="banner-conteudo">
+                <h1 class="titulo-filme">SUPERMAN</h1>
+                <a href="#filme-detalhes"
+                    class="comprar-ingresso"
+                    data-titulo="SUPERMAN"
+                    data-img="images/Superman - capa.jpg"
+                    data-descricao="Segue o super-herói titular enquanto ele reconcilia sua herança com sua educação humana. Ele é a personificação da verdade, da justiça e de um futuro melhor em um mundo que vê a bondade como algo antiquado."
+                    data-duracao="2h 2 min"
+                    data-classificacao="13 anos"
+                    data-horarios="-/-"
+                    data-elenco="David Corenswet, Rachel Brosnahan, Nathan Fillion"
+                    data-sala="-/-">Ver detalhes</a>
+            </div>
+        </div>
+        <div class="banner-slide" style="background-image: url('images/Lilo & Stitch - banner.jpg');" alt="Lilo & Stitch Banner">
+            <div class="banner-conteudo">
+                <h1 class="titulo-filme">LILO & STITCH</h1>
+                <a href="#filme-detalhes"
+                    class="comprar-ingresso"
+                    data-titulo="LILO & STITCH"
+                    data-img="images/Lilo & Stitch - capa.jpg"
+                    data-descricao="Live-action do famoso clássico de animação da Disney, Lilo & Stitch conta a história da amizade entre uma jovem menina humana e um alienígena fugitivo que parece um cachorro. Stitch (Chris Sanders), o experimento 626, é um extraterrestre expressivo que é adotado como animal de estimação por Lilo (Maia Kealoha), uma imaginativa e rebelde garota havaiana, e juntos eles descobrem o significado de família. O jeito extrovertido de Lilo mais do que corresponde à energia caótica do pequeno monstro peludo e impulsivo que está sendo caçado pelos agentes da Federação Galáctica Unida. A amizade incomum entre os dois provoca uma série de confusões e problemas até com a assistente social que cuida de Lilo, observando seu bem-estar ao lado da irmã Nani, sua tutora legal desde a morte dos pais."
+                    data-duracao="1h 48min"
+                    data-classificacao="10 anos"
+                    data-horarios="11h, 14h, 18h"
+                    data-elenco=" Chris Sanders, Maia Kealoha, Sydney Elizabeth Agudong"
+                    data-sala="Sala 3">Ver detalhes</a>
+            </div>
+        </div>
+    </div>
+    
+
+    <main id="conteudo">
+        <!-- Aba Inicio -->
+        <section id="inicio" class="tab-conteudo active">
+            <h1 class="titulo-secao">FILMES EM CARTAZ</h1>
+            <br><br>
+            <div class="filme-list">
+                <!-- Exibir filmes em cartaz aqui -->
+                <div class="filme-item">
+                    <a href="#filme-detalhes" 
+                       class="filme-link"
+                       data-titulo="THUNDERBOLTS*"
+                       data-img="images/thunderbolts - capa.jpg"
+                       data-descricao="Um grupo de anti-heróis é recrutado para uma missão impossível."
+                       data-duracao="2h 10min"
+                       data-classificacao="14 anos"
+                       data-horarios="14h, 17h, 20h"
+                       data-elenco="Sebastian Stan, Florence Pugh, Wyatt Russell"
+                       data-sala="Sala 1">
+                        <img src="images/thunderbolts - capa.jpg" alt="THUNDERBOLTS* - Em Cartaz">
+                        <p>THUNDERBOLTS* - Em Cartaz</p>
+                    </a>
+                </div>
+                <div class="filme-item">
+                    <a href="#filme-detalhes"
+                       class="filme-link"
+                       data-titulo="UNTIL DAWN: NOITE DE TERROR"
+                       data-img="images/until dawn - capa.jpg"
+                       data-descricao="Explorando um centro de visitantes abandonado, Clover e seus amigos encontram um assassino mascarado que os mata um por um. No entanto, quando eles misteriosamente acordam no início da mesma noite, são forçados a reviver o terror repetidamente."
+                       data-duracao="1h 43min"
+                       data-classificacao="18 anos"
+                       data-horarios="10h, 15h, 19h"
+                       data-elenco="Ella Rubin, Michael Cimino, Ji-young Yoo, Belmont Cameli, Odessa A'zion, Maia Mitchell"
+                       data-sala="Sala 2">
+                        <img src="images/until dawn - capa.jpg" alt="UNTIL DAWN: NOITE DE TERROR - Em Cartaz">
+                        <p>UNTIL DAWN: NOITE DE TERROR - Em Cartaz</p>
+                    </a>
+                </div>
+                <div class="filme-item">
+                    <a href="#filme-detalhes"
+                       class="filme-link"
+                       data-titulo="LILO & STITCH"
+                       data-img="images/Lilo & Stitch - capa.jpg"
+                       data-descricao="Live-action do famoso clássico de animação da Disney, Lilo & Stitch conta a história da amizade entre uma jovem menina humana e um alienígena fugitivo que parece um cachorro. Stitch (Chris Sanders), o experimento 626, é um extraterrestre expressivo que é adotado como animal de estimação por Lilo (Maia Kealoha), uma imaginativa e rebelde garota havaiana, e juntos eles descobrem o significado de família. O jeito extrovertido de Lilo mais do que corresponde à energia caótica do pequeno monstro peludo e impulsivo que está sendo caçado pelos agentes da Federação Galáctica Unida. A amizade incomum entre os dois provoca uma série de confusões e problemas até com a assistente social que cuida de Lilo, observando seu bem-estar ao lado da irmã Nani, sua tutora legal desde a morte dos pais."
+                       data-duracao="1h 48min"
+                       data-classificacao="10 anos"
+                       data-horarios="11h, 14h, 18h"
+                       data-elenco=" Chris Sanders, Maia Kealoha, Sydney Elizabeth Agudong"
+                       data-sala="Sala 3">
+                        <img src="images/Lilo & Stitch - capa.jpg" alt="LILO & STITCH - Em Cartaz">
+                        <p>LILO & STITCH - Em Cartaz</p>
+                    </a>    
+                </div>
+                <div class="filme-item">
+                    <a href="#filme-detalhes"
+                       class="filme-link"
+                       data-titulo="BAILARINA: DO UNIVERSO DE JOHN WICK"
+                       data-img="images/Bailarina - capa.jpg"
+                       data-descricao="Em Bailarina, conheça a história de uma jovem assassina nas tradições dos Ruska Roma para buscar vingança contra aqueles que destruiram sua familia. Situado no mesmo universo de John Wick, o filme mistura ação coreografada e um drama visceral, com Ana de Armas no papel principal. Classificação indicativa 18 Anos. Contém drogas lícitas, linguagem imprópria, violência extrema."
+                       data-duracao="2h 5min"
+                       data-classificacao="18 anos"
+                       data-horarios="17h, 19h, 22h"
+                       data-elenco="Len Wiseman, Ana de Armas, Catalina Sandino Morena, Gabriel Byrne"
+                       data-sala="Sala 4">
+                        <img src="images/Bailarina - capa.jpg" alt="Bailarina: DO UNIVERSO DE JOHN WICK - Em Cartaz">
+                        <p>BAILARINA: DO UNIVERSO DE JOHN WICK - Em Cartaz</p>
+                    </a>    
+                </div>
+            </div>
+            <br><br><br><br>
+            <!-- Exibir filmes em breve aqui -->
+            <h1 class="titulo-secao">FILMES EM BREVE</h1>
+            <br><br>
+            <div class="filme-list">
+                <div class="filme-item">
+                    <a href="#filme-detalhes"
+                        class="filme-link"
+                        data-titulo="SUPERMAN"
+                        data-img="images/Superman - capa.jpg"
+                        data-descricao="Segue o super-herói titular enquanto ele reconcilia sua herança com sua educação humana. Ele é a personificação da verdade, da justiça e de um futuro melhor em um mundo que vê a bondade como algo antiquado."
+                        data-duracao="2h 2 min"
+                        data-classificacao="13 anos"
+                        data-horarios="-/-"
+                        data-elenco="David Corenswet, Rachel Brosnahan, Nathan Fillion"
+                        data-sala="-/-">
+                    <img src="images/Superman - capa.jpg" alt="Superman - Em Breve">
+                    <p>SUPERMAN - Em Breve</p>
+                    </a>
+                </div>
+                <div class="filme-item">
+                    <a href="#filme-detalhes"
+                        class="filme-link"
+                        data-titulo="QUARTETO FANTASTICO"
+                        data-img="images/fantastic four - capa.jpeg"
+                        data-descricao="Forçados a equilibrar seus papéis como heróis e a força dos laços familiares, o Quarteto Fantástico deve defender a Terra de um deus espacial voraz chamado Galactus e sua enigmática arauta, a Surfista Prateada."
+                        data-duracao="2h 10 min"
+                        data-classificacao="13 anos"
+                        data-horarios="-/-"
+                        data-elenco="Pedro Pascal, Vanessa Kirby, Joseph Quinn"
+                        data-sala="-/-">
+                    <img src="images/fantastic four - capa.jpeg" alt="Quarteto Fantástico - Em Breve">
+                    <p>QUARTETO FANTASTICO - Em Breve</p>
+                    </a>
+                </div>
+                <div class="filme-item">
+                    <a href="#filme-detalhes"
+                        class="filme-link"
+                        data-titulo="KIMETSU NO YAIBA: CASTELO INFINITO"
+                        data-img="images/kimetsu no Yaiba - capa.jpg"
+                        data-descricao="Com o líder do Esquadrão de Caçadores em perigo, Tanjiro e os Hashira vão até sua base, mas são sugados em uma descida profunda para um espaço misterioso, graças a Muzan Kibutsuji. O destino onde Tanjiro e os Caçadores caem é a fortaleza dos Oni, o Castelo Infinito. E então, o campo de batalha está formado para dar início a luta final entre o Esquadrão de Caçadores e os Oni."
+                        data-duracao="1h 34 min"
+                        data-classificacao="14 anos"
+                        data-horarios="-/-"
+                        data-elenco="Natsuki Hanae (Tanjiro Kamado), Akari Kitou (Nezuko Kamado), Yoshitsugu Matsuoka (Inosuke Hashibira), Hiro Shimono (Zenitsu Agatsuma), entre outros."
+                        data-sala="-/-">
+                    <img src="images/Kimetsu no Yaiba - capa.jpg" alt="KIMETSU NO YAIBA: CASTELO INFINITO - Em Breve">
+                    <p>KIMETSU NO YAIBA: CASTELO INFINITO - Em Breve</p>
+                    </a>
+                </div>
+                <div class="filme-item">
+                    <a href="#filme-detalhes"
+                        class="filme-link"
+                        data-titulo="F1: O FILME"
+                        data-img="images/F1 - capa.jpg"
+                        data-descricao="Em F1, um piloto veterano de Fórmula 1 volta da aposentadoria para ser o mentor de seu jovem colega de equipe. No filme produzido pelo heptacampeão de Fórmula 1 Lewis Hamilton, depois de abandonar as pistas, o lendário piloto Sonny Hayes (Brad Pitt) é convencido a voltar a correr para apoiar Joshua Pearce (Damson Idris), o jovem novato da escuderia fictícia ApexGP. Disposto a todos os riscos, Sonny monta uma estratégia para fazer a equipe se tornar vitoriosa, para isso ele precisará do apoio da comissão técnica e de pessoas influentes do esporte, mostrando que a corrida vai muito além das curvas dos autódromos. Classificação indicativa 12 Anos. Contém drogas lícitas, linguagem imprópria."
+                        data-duracao="2h 35 min"
+                        data-classificacao="12 anos"
+                        data-horarios="-/-"
+                        data-elenco="Joseph Kosinski, Brad Pitt, Damson Idris, Kerry Condon, Javier Bardem, Tobias Menzies"
+                        data-sala="-/-">
+                    <img src="images/F1 - capa.jpg" alt="F1: O FILME - Em Breve">
+                    <p>F1: O FILME - Em Breve</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aba Quem Somos? -->
+        <section id="sobre" class="tab-conteudo">
+            <div class="sobre">
+            <h2 class="titulo-secao">Quem Somos</h2>
+            <br>
+            <p>Mais do que um cinema, somos um ponto de encontro para os apaixonados pela sétima arte. Fundado com o propósito de oferecer uma experiência cinematográfica completa, nosso espaço une conforto, tecnologia de ponta e uma curadoria que valoriza tanto os grandes lançamentos quanto as produções independentes e clássicas do cinema mundial.
+               Acreditamos no poder dos filmes para emocionar, inspirar e conectar pessoas. Por isso, buscamos sempre criar um ambiente acolhedor, com uma programação diversa e acessível a todos os públicos. Se você ama cinema, aqui é o seu lugar.</p>
+            <br><br>
+            </div>
+        </section>
+
+       <!-- Aba Catálogo -->
+        <section id="catalogo" class="tab-conteudo">
+            <h2 class="titulo-secao">Catálogo de Filmes</h2>
+            <br>
+            <div class="catalogo-wrapper">
+                <div class="seta seta-esquerda" id="catalogo-esquerda">&#9664;</div>
+        
+                <!-- Container com rolagem horizontal -->
+                <div id="catalogoContainer" class="catalogo-filmes">
+                    <div class="filme-item">
+                        <a href="#filme-detalhes" 
+                           class="filme-link"
+                           data-titulo="THUNDERBOLTS*"
+                           data-img="images/thunderbolts - capa.jpg"
+                           data-descricao="Um grupo de anti-heróis é recrutado para uma missão impossível."
+                           data-duracao="2h 10min"
+                           data-classificacao="14 anos"
+                           data-horarios="14h, 17h, 20h"
+                           data-elenco="Sebastian Stan, Florence Pugh, Wyatt Russell"
+                           data-sala="Sala 1">
+                            <img src="images/thunderbolts - capa.jpg" alt="THUNDERBOLTS*">
+                            <p>THUNDERBOLTS*</p>
+                        </a>
+                    </div>
+                    <div class="filme-item">
+                        <a href="#filme-detalhes"
+                           class="filme-link"
+                           data-titulo="UNTIL DAWN: NOITE DE TERROR"
+                           data-img="images/until dawn - capa.jpg"
+                           data-descricao="Explorando um centro de visitantes abandonado, Clover e seus amigos encontram um assassino mascarado que os mata um por um. No entanto, quando eles misteriosamente acordam no início da mesma noite, são forçados a reviver o terror repetidamente."
+                           data-duracao="1h 43min"
+                           data-classificacao="18 anos"
+                           data-horarios="10h, 15h, 19h"
+                           data-elenco="Ella Rubin, Michael Cimino, Ji-young Yoo, Belmont Cameli, Odessa A'zion, Maia Mitchell"
+                           data-sala="Sala 2">
+                            <img src="images/until dawn - capa.jpg" alt="UNTIL DAWN: NOITE DE TERROR">
+                            <p>UNTIL DAWN: NOITE DE TERROR</p>
+                        </a>
+                    </div>
+                    <div class="filme-item">
+                        <a href="#filme-detalhes"
+                           class="filme-link"
+                           data-titulo="LILO & STITCH"
+                           data-img="images/Lilo & Stitch - capa.jpg"
+                           data-descricao="Live-action do famoso clássico de animação da Disney, Lilo & Stitch conta a história da amizade entre uma jovem menina humana e um alienígena fugitivo que parece um cachorro. Stitch (Chris Sanders), o experimento 626, é um extraterrestre expressivo que é adotado como animal de estimação por Lilo (Maia Kealoha), uma imaginativa e rebelde garota havaiana, e juntos eles descobrem o significado de família. O jeito extrovertido de Lilo mais do que corresponde à energia caótica do pequeno monstro peludo e impulsivo que está sendo caçado pelos agentes da Federação Galáctica Unida. A amizade incomum entre os dois provoca uma série de confusões e problemas até com a assistente social que cuida de Lilo, observando seu bem-estar ao lado da irmã Nani, sua tutora legal desde a morte dos pais."
+                           data-duracao="1h 48min"
+                           data-classificacao="10 anos"
+                           data-horarios="11h, 14h, 18h"
+                           data-elenco=" Chris Sanders, Maia Kealoha, Sydney Elizabeth Agudong"
+                           data-sala="Sala 3">
+                            <img src="images/Lilo & Stitch - capa.jpg" alt="LILO & STITCH">
+                            <p>LILO & STITCH</p>
+                        </a>    
+                    </div>
+                    <div class="filme-item">
+                        <a href="#filme-detalhes"
+                        class="filme-link"
+                        data-titulo="BAILARINA: DO UNIVERSO DE JOHN WICK"
+                        data-img="images/Bailarina - capa.jpg"
+                        data-descricao="Em Bailarina, conheça a história de uma jovem assassina nas tradições dos Ruska Roma para buscar vingança contra aqueles que destruiram sua familia. Situado no mesmo universo de John Wick, o filme mistura ação coreografada e um drama visceral, com Ana de Armas no papel principal. Classificação indicativa 18 Anos. Contém drogas lícitas, linguagem imprópria, violência extrema."
+                        data-duracao="2h 5min"
+                        data-classificacao="18 anos"
+                        data-horarios="17h, 19h, 22h"
+                        data-elenco="Len Wiseman, Ana de Armas, Catalina Sandino Morena, Gabriel Byrne"
+                        data-sala="Sala 4">
+                            <img src="images/Bailarina - capa.jpg" alt="BAILARINA: DO UNIVERSO DE JOHN WICK">
+                            <p>BAILARINA: DO UNIVERSO DE JOHN WICK</p>
+                        </a>    
+                    </div>
+                    <div class="filme-item">
+                        <a href="#filme-detalhes"
+                            class="filme-link"
+                            data-titulo="SUPERMAN"
+                            data-img="images/Superman - capa.jpg"
+                            data-descricao="Segue o super-herói titular enquanto ele reconcilia sua herança com sua educação humana. Ele é a personificação da verdade, da justiça e de um futuro melhor em um mundo que vê a bondade como algo antiquado."
+                            data-duracao="2h 2 min"
+                            data-classificacao="13 anos"
+                            data-horarios="-/-"
+                            data-elenco="David Corenswet, Rachel Brosnahan, Nathan Fillion"
+                            data-sala="-/-">
+                        <img src="images/Superman - capa.jpg" alt="SUPERMAN">
+                        <p>SUPERMAN</p>
+                        </a>
+                    </div>
+                    <div class="filme-item">
+                        <a href="#filme-detalhes"
+                            class="filme-link"
+                            data-titulo="QUARTETO FANTASTICO"
+                            data-img="images/fantastic four - capa.jpeg"
+                            data-descricao="Forçados a equilibrar seus papéis como heróis e a força dos laços familiares, o Quarteto Fantástico deve defender a Terra de um deus espacial voraz chamado Galactus e sua enigmática arauta, a Surfista Prateada."
+                            data-duracao="2h 10 min"
+                            data-classificacao="13 anos"
+                            data-horarios="-/-"
+                            data-elenco="Pedro Pascal, Vanessa Kirby, Joseph Quinn"
+                            data-sala="-/-">
+                        <img src="images/fantastic four - capa.jpeg" alt="QUARTETO FANTASTICO">
+                        <p>QUARTETO FANTASTICO</p>
+                        </a>
+                    </div>
+                    <div class="filme-item">
+                        <a href="#filme-detalhes"
+                            class="filme-link"
+                            data-titulo="KIMETSU NO YAIBA: CASTELO INFINITO"
+                            data-img="images/kimetsu no Yaiba - capa.jpg"
+                            data-descricao="Com o líder do Esquadrão de Caçadores em perigo, Tanjiro e os Hashira vão até sua base, mas são sugados em uma descida profunda para um espaço misterioso, graças a Muzan Kibutsuji. O destino onde Tanjiro e os Caçadores caem é a fortaleza dos Oni, o Castelo Infinito. E então, o campo de batalha está formado para dar início a luta final entre o Esquadrão de Caçadores e os Oni."
+                            data-duracao="1h 34 min"
+                            data-classificacao="14 anos"
+                            data-horarios="-/-"
+                            data-elenco="Natsuki Hanae (Tanjiro Kamado), Akari Kitou (Nezuko Kamado), Yoshitsugu Matsuoka (Inosuke Hashibira), Hiro Shimono (Zenitsu Agatsuma), entre outros."
+                            data-sala="-/-">
+                        <img src="images/Kimetsu no Yaiba - capa.jpg" alt="KIMETSU NO YAIBA: CASTELO INFINITO">
+                        <p>KIMETSU NO YAIBA: CASTELO INFINITO</p>
+                        </a>
+                    </div>
+                    <div class="filme-item">
+                        <a href="#filme-detalhes"
+                            class="filme-link"
+                            data-titulo="F1: O FILME"
+                            data-img="images/F1 - capa.jpg"
+                            data-descricao="Em F1, um piloto veterano de Fórmula 1 volta da aposentadoria para ser o mentor de seu jovem colega de equipe. No filme produzido pelo heptacampeão de Fórmula 1 Lewis Hamilton, depois de abandonar as pistas, o lendário piloto Sonny Hayes (Brad Pitt) é convencido a voltar a correr para apoiar Joshua Pearce (Damson Idris), o jovem novato da escuderia fictícia ApexGP. Disposto a todos os riscos, Sonny monta uma estratégia para fazer a equipe se tornar vitoriosa, para isso ele precisará do apoio da comissão técnica e de pessoas influentes do esporte, mostrando que a corrida vai muito além das curvas dos autódromos. Classificação indicativa 12 Anos. Contém drogas lícitas, linguagem imprópria."
+                            data-duracao="2h 35 min"
+                            data-classificacao="12 anos"
+                            data-horarios="-/-"
+                            data-elenco="Joseph Kosinski, Brad Pitt, Damson Idris, Kerry Condon, Javier Bardem, Tobias Menzies"
+                            data-sala="-/-">
+                        <img src="images/F1 - capa.jpg" alt="F1: O FILME">
+                        <p>F1: O FILME</p>
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="seta seta-direita" id="catalogo-direita">&#9654;</div>
+            </div>
+        </section>
+
+         <!-- Aba Localização -->
+        <section id="local" class="tab-conteudo localizacao">
+            <h2 class="titulo-secao">Nossos cinemas mais proximo de você</h2>
+            <h5 class="subtitulo-secao">Brasília - DF</h5>
+            <div class="imagens-container">
+            <img src="images/Cinema - sala.jpg" alt="Sala cinema">
+            <img src="images/Cinema - sala premium.jpg" alt="Sala premium cinema">
+            <img src="images/Cinema - entrada.jpg" alt="Entrada do cinema">
+            </div>
+        </section>        
+    </main>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar-btn">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="E-mail" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+                <button type="button" id="fecharLogin" class="fechar-login">Fechar</button>
+            </form>
+        </div>
+    </div>
+    
+    <!--Função para descrição do filme-->
+    <section id="filme-detalhes" class="tab-conteudo">
+        <div class="detalhes-container">
+            <img id="detalhes-img" src="" alt="Capa do Filme">
+            <div class="info">
+                <h2 id="detalhes-titulo">Título do Filme</h2>
+                <p id="detalhes-descricao">Descrição do filme...</p>
+                <p><strong>Duração:</strong> <span id="detalhes-duracao"></span></p>
+                <p><strong>Classificação:</strong> <span id="detalhes-classificacao"></span></p>
+                <p><strong>Elenco:</strong> <span id="detalhes-elenco"></span></p>
+                <p><strong>Horários:</strong> <span id="detalhes-horarios"></span></p>
+                <p><strong>Sala: </strong><span id="detalhes-sala"></span></p>
+            </div>
+        </div>
+    </section>
+    
+    <!--Rodapé-->
+    <footer>
+        <p>&copy; 2025 Cartoon Discovery</p>
+    </footer>
+</body>
+</html>
